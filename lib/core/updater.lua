@@ -3,7 +3,6 @@
 ---------------------------------------
 
 local helpers = require('/lib/core/helpers');
-local sha256 = require('/lib/core/sha256');
 
 -- Fetch a local file
 -- @param string - file with path
