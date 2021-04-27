@@ -2,8 +2,8 @@
 -- UPDATER API
 ---------------------------------------
 
-local helpers = require('/libs/core/helpers');
-local sha256 = require('/libs/core/sha256');
+local helpers = require('/lib/core/helpers');
+local sha256 = require('/lib/core/sha256');
 
 -- Fetch a local file
 -- @param string - file with path
@@ -95,6 +95,9 @@ local function update(manifest_file)
             -- Update and save the local manifest
             manifest['files'][file] = hash
             writeToFile(textutils.serializeJSON(manifest), manifest_file)
+
+            -- Fire off updated event
+            os.queueEvent('eos.core.updater.updated', file)
         end
 
         -- Update files remaining
@@ -102,7 +105,6 @@ local function update(manifest_file)
 
         -- Fire off update event
         os.queueEvent('eos.core.updater.status', {
-            ['updatedFile'] = file,
             ['remaining'] = helpers.getTableLength(filesRemaining),
             ['total'] = helpers.getTableLength(remoteManifest['files']),
         })
