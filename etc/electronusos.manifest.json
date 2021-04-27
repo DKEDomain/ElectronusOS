@@ -6,6 +6,7 @@
     "files": {
         "/lib/core/sha256.lua": "1",
         "/lib/core/updater.lua": "1",
-        "/lib/core/helpers.lua": "1"
+        "/lib/core/helpers.lua": "1",
+        "/bin/os-update": "1"
     }
 }
