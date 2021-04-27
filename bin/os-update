@@ -1,0 +1,34 @@
+local updater = require('/lib/core/updater')
+
+local function printUpdates()
+    local complete = false
+    while not complete do
+        local key, event = os.pullEvent()
+
+        if key == 'eos.core.updater.status' then
+            print('Status: '.. event['total'] - event['remaining'] .. '/' .. event['total'])
+        end
+
+        if key == 'eos.core.updater.updated' then
+            print('Updated file: ' .. event)
+        end
+
+        if key == 'eos.core.updater.delete' then
+            print('Deleted file: ' .. event)
+        end
+
+        if key == 'eos.core.updater.complete' then
+            print('--')
+            print('Update complete!')
+            complete = event
+        end
+    end
+end
+
+local function update()
+    updater.update('/etc/electronusos.manifest.json')
+end
+
+print('Checking for updates...')
+print('--')
+parallel.waitForAll(printUpdates, update)
