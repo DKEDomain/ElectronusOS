@@ -1,0 +1,11 @@
+{
+    "name": "ElectronusOS Manifest",
+    "version": "0.0.1",
+    "repository_url": "https://raw.githubusercontent.com/DKEDomain/ElectronusOS/main",
+    "remote_manifest": "https://raw.githubusercontent.com/DKEDomain/ElectronusOS/main/etc/electronusos.manifest.json",
+    "files": {
+        "/libs/core/sha256.lua": "1",
+        "/libs/core/updater.lua": "1",
+        "/libs/core/helpers.lua": "1"
+    }
+}
