@@ -30,7 +30,7 @@ local function getRemoteFile(file_url)
         error('Error fetching remote file ' .. file_url .. ': ' .. err)
     end
 
-    file = file.readAll();
+    local file = response.readAll();
     response.close();
 
     return file
