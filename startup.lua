@@ -19,18 +19,18 @@ end
 -- @return void
 local function drawLogo()
 	local logo = {
-		'########        #######   ###### ',
-		'##             ##     ## ##    ##',
-		'##             ##     ## ##      ',
-		'######         ##     ##  ###### ',
-		'##             ##     ##       ##',
-		'##             ##     ## ##    ##',
-		'########        #######   ######'
+		'########',
+		'##      ',
+		'##      ',
+		'######  ',
+		'##      ',
+		'##      ',
+		'########'
 	}
 
 	for key, line in pairs(logo) do
 		-- Center the logo
-		term.setCursorPos(((w / 2) - 16), 2 + (key + 1))
+		term.setCursorPos(((w / 2) - 4), 2 + (key + 1))
 		print(line)
 	end
 
