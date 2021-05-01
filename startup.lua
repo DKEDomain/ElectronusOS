@@ -30,14 +30,11 @@ local function drawLogo()
 
 	for key, line in pairs(logo) do
 		-- Center the logo
-		local x = ((w / 2) - 16)
-		local y = ((h / 2) - 8) + (key + 1)
-		term.setCursorPos(x, y)
-
+		term.setCursorPos(((w / 2) - 16), 2 + (key + 1))
 		print(line)
 	end
 
-	term.setCursorPos(1, 12)
+	term.setCursorPos(1, 6 + #logo)
 end
 
 -- Clear and setup screen
