@@ -8,6 +8,7 @@
         "/lib/core/updater.lua": "1",
         "/lib/core/helpers.lua": "1",
         "/lib/core/telemetry.lua": "1",
+        "/startup.lua": "1",
         "/bin/os-update": "1"
     }
 }
