@@ -1,13 +1,13 @@
 {
     "name": "ElectronusOS Manifest",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "repository_url": "https://raw.githubusercontent.com/DKEDomain/ElectronusOS/main",
     "remote_manifest": "https://raw.githubusercontent.com/DKEDomain/ElectronusOS/main/etc/electronusos.manifest.json",
     "files": {
         "/lib/core/sha256.lua": "1",
         "/lib/core/updater.lua": "1",
         "/lib/core/helpers.lua": "1.1",
-        "/lib/core/telemetry.lua": "1",
+        "/lib/core/telemetry.lua": "1.0.1",
         "/startup.lua": "1.0.1",
         "/bin/os-update": "1"
     }
