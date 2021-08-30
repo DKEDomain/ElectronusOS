@@ -144,6 +144,8 @@ loadSettings()
 loadComputerType()
 loadPeripherals()
 
+settings.save(settingsPath)
+
 print('ID: '..os.computerID())
 
 sleep(2)
