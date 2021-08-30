@@ -31,7 +31,7 @@ local function exitTelemetry()
     local exit = nil
 
     while not exit do
-        local key, event = os.pullEvent()
+        local key = os.pullEvent()
 
         if key == 'eos.system.telemetry.exit' then
             exit = true
@@ -58,6 +58,7 @@ local function send(recipient, message, sendProtocol)
 end
 
 return {
+    protocolNamespace = protocolNamespace,
     listen = listen,
     send = send,
 }
